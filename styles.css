@@ -1,6 +1,6 @@
 body {
     font-family: 'Slabo 27px', serif;
-    background-color: darkblue;
+    background-color: black;
     color: white;
     margin: 0;
 }
@@ -88,8 +88,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  height: 80%;
+  width: 80%; /* Could be more or less, depending on screen size */  
 }
 
 /* The Close Button (x) */
@@ -97,8 +96,7 @@ span.psw {
   position: absolute;
   right: 25px;
   top: 0;
-  color: #000;
-  border: 1px solid black;
+  color: #000;  
   font-size: 35px;
   font-weight: bold;
 }
