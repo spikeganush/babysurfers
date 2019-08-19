@@ -1,0 +1,138 @@
+<!doctype HTML>
+<html lang="en">
+
+<head>
+    <title>Baby Surfers 2019</title>
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<!--    <link rel="shortcut icon" href="favicon.png">    -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <meta name="author" content="Spike">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="header">
+         <button class="nav-button">
+            <div class="stripe top"></div>
+            <div class="stripe mid"></div>
+            <div class="stripe down"></div>
+        </button>
+        <picture>
+            <source media="(min-width: 769px)" srcset="logo.png">
+        <img src="phone_logo.png" class="logo">
+        </picture>
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Riders</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="pro.html">Professional</a>
+                            </li>
+                            <li>
+                                <a href="international.html">International</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+                <li>
+                    <a href="stores.html">Stores</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+<!-- IF a lightbox for the pictures is needed
+        <div id="lightbox">
+            <div id="lightbox-content">
+        <img class="resultLighbox" src="">
+            <span class="close">&times;</span>
+            </div>
+        </div>
+-->
+        <section class="banner">  
+            
+            <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+            <div id="login" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+        </section>
+<!-- example of structure
+        <div class="row">
+            <div class="column">
+                <h2>Flat V2 is here</h2>
+                <div class="circle one"></div>
+                <p>
+                    The new frame from Kaltik is out. The flat V2, you will can ride flat with bigger wheels. A custom set-up it allow you to ride up to 65mm with the up flat setting or 68 mm for the down flat setting.
+                </p>
+            </div>
+            <div class="column">
+                <h2>Summer sales</h2>
+                <div class="circle two"></div>
+                <p>
+                  To start the summer with good vibes, we propose to you a week end of special promotion. All products on the Kaltik website are 25% off, and you can pre order the bucket cap at $24 now.
+                </p>
+            </div>
+            <div class="column">
+                <h2>South America tour</h2>
+                <div class="circle three"></div>
+                <p>
+                    Our frenchie Roman Abrate the World Champion 2018 is going in South America make a tour during 5 months. Peru November to April, Chile January to February and Mexico February to March. Prepare your schedule and stay tune for further information.                
+					</p>
+            </div>
+        </div>
+-->
+        <div class="newsletter">
+            <form class="newsletter-form">
+                <input type="email" value="user@domain.com">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    </main>
+    <footer class="footer">
+        <a href="https://facebook.com/babysurfersofsydney/"><i class="fab fa-facebook"></i> Join the Facebook community</a>        
+        <a href="https://instagram.com/babysurfersofsydney/"><i class="fab fa-instagram"></i></a>
+    </footer>
+</body>
+
+</html>

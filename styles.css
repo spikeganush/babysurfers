@@ -1,0 +1,707 @@
+body {
+    font-family: 'Slabo 27px', serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/*Test login form*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-shadow: 2px 2px 5px black;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+    border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+
+
+
+
+
+
+.nav-button {
+    display: none;    
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    border-color: transparent;    
+}
+
+.stripe {
+    min-height: 4px;
+    background-color: #E3181B;
+    margin: 7px 0;
+}
+
+ .top {
+     transform: rotate(0deg);
+     transition: transform 0.8s;
+ }
+
+ .down {
+     transform: rotate(0deg);
+     transition: transform 1s;
+ }
+
+ .top.open {
+     transform-origin: center center;
+     transform: translateY(11px) rotate(-45deg);
+ }
+
+ .down.open {
+     transform-origin: center center;
+     transform: translateY(-11px) rotate(45deg);
+ }
+
+ .mid.open {
+     opacity: 1;
+     transition: opacity 1s;
+ }
+
+ .mid.open {
+     opacity: 0;
+ }
+/*----------------------------------Header with logo and navigation-------------------------------------*/
+.header {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 1));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 460px;
+    margin-top: 10px;
+}
+
+.header a {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 0.8em;
+    border-radius: 4px;
+    transition: background-color 0.8s;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header a {
+    margin-right: 0.5em;
+}
+
+.header a:hover, .header a:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header .active {
+    color: #E3181B;
+    font-style: italic;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation > ul {
+    display: flex;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a::after {
+    content: "\25bc";
+    font-size: 12px;
+    margin-left: 12px;
+}
+
+ul.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 2px 2px 5px black;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s;
+}
+
+.dropdown-menu a {
+    background: none;
+    transition: color 0.8s;
+}
+
+.dropdown-menu a:hover {
+    background: none;
+    color: #E3181B;
+}
+
+.dropdown-menu li {
+    padding-top: 10px;
+}
+
+.dropdown-menu li:last-child {
+    padding-bottom: 10px;
+}
+
+
+li.dropdown:hover > .dropdown-menu {
+    max-height: 600px;
+
+}
+
+.header .dropdown_active {
+        color: #E3181B;
+        font-style: italic;
+    }
+
+.header .dropdown_active:hover {
+        color: white;
+    }
+
+/*---------------------------------Banner picture----------------------------------*/
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*------------------------------Main content----------------------------------*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex 1;
+    margin-right: 50px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.column a {
+    text-decoration: none;
+    color: white;    
+}
+
+.column a:hover {
+    color: #E3181B;
+}
+
+h2 {
+    text-align: center;
+}
+
+.circle {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.one {
+    background-image: url(news.jpg);
+}
+
+.two {
+    background-image: url(news2.jpg);
+}
+
+.three {
+    background-image: url(news3.jpg);
+}
+
+
+.circle img {
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.column p {
+    margin: 30px auto;
+    max-width: 80%;
+    padding: 0.5em;    
+}
+
+
+/*--------------------------------------Newsletter banner and form-----------------------------*/
+.newsletter {
+    margin-top: 10px;
+    display: flex;
+    background-image: url(newsletter.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 10px 10px 9px black;
+    margin-top: 15%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.newsletter-form input {
+    padding: 5px;
+    font-size: 2vw;
+    border-radius: 10px 0 0 10px;
+    border: 0;
+}
+
+.newsletter-form button {
+    background
+    padding: 5px;
+    font-size: 2vw;
+    border-radius: 0 10px 10px 0;
+    border: 0;
+}
+
+/*-----------------------------------Footer with social media links----------------------------------*/
+
+.footer {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.3));
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    font-size: 32px;
+    transition: color 0.8s;
+}
+
+.footer a:hover, .footer a:focus {
+    color: #E3181B;
+    
+}
+
+/*----------------------------------Lightbox----------------------------------*/
+
+#lightbox{
+  display: none;
+  grid-template-columns:auto auto auto;
+  grid-template-rows: auto auto auto; 
+  position: fixed;    
+  z-index: 999;   
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;  
+  background-color: rgba(0,0,0,0.7); 
+
+}
+
+#lightbox-content {
+  display: grid;
+ grid-column-start: 2;
+ grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  float: left;   
+  position: relative;
+  grid-template-columns:28px auto 28px ;
+  grid-template-rows: 28px auto 28px;   
+  background-color: #c3c3c3;  
+  animation-name: fromthetop;
+  animation-duration: 0.8s;    
+}
+
+.resultLighbox {
+    box-shadow: 2px 2px 5px black;    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    place-self: center;
+    }
+
+
+
+@keyframes fromthetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {    
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  place-self: center; 
+  text-shadow: 2px 2px 2px black;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px white;
+}
+
+#lightbox.show{
+	display: grid;	
+}
+
+
+/*----------------------------------First breakpoint----------------------------------*/
+@media only screen and (max-width: 1200px) {
+
+    .logo {
+        max-width: 360px;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .header a {
+        font-size: 18px;
+    }
+
+    .circle {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/*----------------------------------Breakpoint just for the font----------------------------------*/
+
+@media only screen and (max-width: 859px) {
+    .header a {
+        font-size: 16px;
+    }
+
+}
+
+/*----------------------------------Tablet Breakpoint----------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    .nav-button {
+        display: block;
+        margin-left: 5px;
+    }
+    
+    
+
+    .logo {
+        height: 120px;
+        padding-right: 10px;
+        margin-right: 0;
+    }
+
+    .header a {
+        background: none;
+    }
+
+    .navigation > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .navigation li {
+        padding: 10px;
+    }
+
+    .navigation {
+        z-index: 998;
+        top: 100%;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 35%;
+	background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 0 5px 5px 0;
+        box-shadow: 2px 2px 5px black;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+
+    .navigation.open {        
+        max-height: 600px;       
+    }
+
+    .dropdown {
+        margin-bottom: 60px;
+    }
+
+    ul.dropdown-menu {
+        top: 25px;
+        left: 50px;
+        padding: 0;
+        background: none;
+        overflow: visible;
+    }
+    
+    
+
+    li.dropdown:hover > .dropdown-menu {
+        max-height: 0;
+
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .column {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 10px;
+    }
+
+/*Title*/
+    .column :nth-child(1) {
+        order: 2;
+        flex: 1;
+        text-align: right;
+        margin-right: 25%;
+    }
+/*Picture*/
+    .column :nth-child(2) {
+        order: 1;
+        left: 0;
+        position: absolute;
+        z-index: 997;
+        margin: 0;
+        margin-left: 5px;
+    }
+/*Text*/
+    .column :nth-child(3) {
+        order: 3;
+        flex-grow: 1;
+        margin-left: 180px;
+        
+        
+    }
+
+    .column:last-child {
+        margin-right: 10px;
+    }    
+
+    .circle {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+/*----------------------------------Font breabkpoint----------------------------------*/
+
+@media only screen and (max-width: 615px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+/*----------------------------------Phone breakpoint----------------------------------*/
+
+@media only screen and (max-width: 480px) {
+    .circle {
+        height: 150px;
+        width: 150px;
+    }
+
+    .column :nth-child(2) {
+        margin-top: 6%;
+    }
+
+    .column :nth-child(3) {
+        margin-left: 120px;
+        margin-top: 0;
+
+    }
+
+    .navigation {
+        width: 45%;
+    }   
+}
+
+/*----------------------------------Old phone breakpoint----------------------------------*/
+
+@media only screen and (max-width: 321px) {
+    .logo {
+        height: 80px;
+        padding-right: 10px;
+        margin-right: 0;
+    }    
+
+    .navigation {
+        width: 55%;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+    
+    .column :nth-child(1) {        
+        margin-right: 10%;
+    }
+    
+}
+        
+        
+    
